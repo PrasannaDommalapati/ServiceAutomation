@@ -22,6 +22,7 @@ namespace ServiceAutomation.Steps
         public void BeforeScenario()
         {
             var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("HeaderName", "HeaderValue");
             ObjectContainer.RegisterInstanceAs<HttpClient>(httpClient);
         }
     }
